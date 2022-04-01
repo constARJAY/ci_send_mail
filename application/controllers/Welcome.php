@@ -54,6 +54,8 @@ class Welcome extends CI_Controller {
                     This is an automated message, please do not reply.';
         
         $this->load->library('email', $config);
+
+		$this->email->attach('uploads/qr.png');
         $this->email->set_mailtype("html");
         $this->email->set_newline("\r\n");
         $this->email->from($from_user,'FROM');
