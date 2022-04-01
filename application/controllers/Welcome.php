@@ -64,7 +64,9 @@ class Welcome extends CI_Controller {
         if(!$this->email->send())
         {
             print_r($this->email->print_debugger());
-        }
+        } else {
+			echo "SENT SUCCESSFULLY!";
+		}
 	}
 
 
